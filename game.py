@@ -7,8 +7,6 @@ class Game:
         self.ai = AI("AI")
         self.human = Human(int("Enter second player name: "))
         
-        
-
     def run_game(self):
         self.display_welcome()
         self.display_rules()
@@ -36,9 +34,14 @@ class Game:
             "Scissors decapitates Lizard",
             "Lizard eats Paper",
             "Paper disproves Spock",
-            "Spock vaporizes Rock\n "
-            ]
+            "Spock vaporizes Rock\n ",
 
+            "0 for Rock",
+            "1 for Paper", 
+            "2 for Scissors", 
+            "3 for Lizard", 
+            "4 for Spock\n"
+            ]
             for r in rules:
                 print(r)
                 sleep(1)
@@ -54,7 +57,11 @@ class Game:
             print("You wil be going up against out best AI. Get ready.")
             
         elif user_input== "2":
-            print()            
+            self.human()
+            print(f"You will be up against: {self.human} ")     
+
+a = Game()
+a.ask_for_players()
     
 
 

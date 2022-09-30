@@ -8,17 +8,6 @@ class Player:
     def choose_gesture(self):
         gesture_list =["Rock", "Papar", "Scissor", "Lizard", "Spock"]
         
-        options = [
-        "0 for Rock",
-        "1 for Paper", 
-        "2 for Scissors", 
-        "3 for Lizard", 
-        "4 for Spock\n"
-        ]
-        for num in options:
-            print(num)
-            sleep(1)
-
         valid_reponse = False
         while valid_reponse == False: 
             user_input = input("Choose the gesture you would like to play: ")
