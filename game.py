@@ -5,7 +5,7 @@ class Game:
 
     def __init__(self):
         self.ai = AI("AI")
-        self.human = Human(int("Enter second player name: "))
+        self.human = Human("Second player name: ")
         
     def run_game(self):
         self.display_welcome()
@@ -52,17 +52,15 @@ class Game:
 
     def ask_for_players(self):
         
-        user_input = input("How many players? 1 or 2?")
+        user_input = input("How many players? 1 or 2?: ")
         if user_input == "1":
             print("You wil be going up against out best AI. Get ready.")
             
         elif user_input== "2":
-            self.human()
-            print(f"You will be up against: {self.human} ")     
+            print(f"You will be up against another player.")     
 
-a = Game()
-a.ask_for_players()
     
+a = Game()
 
 
     
