@@ -156,7 +156,8 @@ class AI(Player):
                     print(f"{self.ai_name} has picked {gesture_list[4]}")
                     print(f"{self.ai_name} WINS!!")
                     self.ai_score += 1
-            
+            else:
+                print("That's not an option. Pick again.")
 
 
         

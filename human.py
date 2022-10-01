@@ -131,6 +131,7 @@ class Human(Player):
                     print(f"{self.second_player_name} has picked {gesture_list[2]}")
                     print(f"{self.second_player_name} WINS!!")
                     self.second_player_score += 1
+                
 
             # 4 > 0 and 2
             # 4 < 1 and 3
@@ -156,7 +157,8 @@ class Human(Player):
                     print(f"{self.second_player_name} has picked {gesture_list[4]}")
                     print(f"{self.second_player_name} WINS!!")
                     self.second_player_score += 1
-            
+            else:
+                print("That's not an option. Pick again.")
 
 
     
