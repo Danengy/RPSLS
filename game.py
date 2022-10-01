@@ -6,16 +6,32 @@ from player import Player
 class Game:
 
     def __init__(self):
-        self.player = Player("Player  One")
+        self.player = Player("Player One")
         self.ai = AI("Ai")
         self.second_player = Human("Second Player")
         
         
-        
     def run_game(self):
         self.display_welcome()
-        self.display_rules()
-        self.battle_phase()
+        valid_reponse = False
+        while valid_reponse == False:     
+
+            user_input = input("Are you ready to play? Enter y/n: ")
+            if user_input == "y":
+                self.display_rules()
+                self.battle_phase()
+                valid_reponse = True
+            elif user_input == "n":
+                print("That's too bad. Have a good day.")
+                break 
+            else:
+                print("That's not an option. Try again.")
+            
+
+        
+            
+        
+
 
         
     def display_welcome(self):
@@ -23,38 +39,28 @@ class Game:
 
     def display_rules(self):
 
-        user_input = input("Are you ready to play? Enter y/n: ")
-        if user_input == "y":
+        rules = [
+        "Get ready for an intense game of RPSLS!\n",
 
-            rules = [
-            "Get ready for an intense game of RPSLS!\n",
+        "Here are the rules: \n",
 
-            "Here are the rules: \n",
+        "Each match will be best out of three. ",
+        "Rock crushes Scissors",
+        "Scissors cuts Paper",
+        "Paper covers Rock",
+        "Rock crushes Lizard",
+        "Lizard poisons Spock",
+        "Spock smashes Scissors",
+        "Scissors decapitates Lizard",
+        "Lizard eats Paper",
+        "Paper disproves Spock",
+        "Spock vaporizes Rock\n ",
+        ]
+        
+        for r in rules:
+            print(r)
+            sleep(1)
 
-            "Each match will be best out of three. ",
-            "Rock crushes Scissors",
-            "Scissors cuts Paper",
-            "Paper covers Rock",
-            "Rock crushes Lizard",
-            "Lizard poisons Spock",
-            "Spock smashes Scissors",
-            "Scissors decapitates Lizard",
-            "Lizard eats Paper",
-            "Paper disproves Spock",
-            "Spock vaporizes Rock\n ",
-
-            "0 for Rock",
-            "1 for Paper", 
-            "2 for Scissors", 
-            "3 for Lizard", 
-            "4 for Spock\n"
-            ]
-            for r in rules:
-                print(r)
-                sleep(1)
-
-        elif user_input == "n":
-            print("That's too bad. Have a great day.")
             
 
 
@@ -68,5 +74,5 @@ class Game:
         elif user_input== "2":
             print(f"You will be up against another player.")    
             self.second_player.player_vs_player()
-    
+        sleep(1)
     
