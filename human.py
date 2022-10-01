@@ -1,5 +1,7 @@
 from time import sleep
 from player import Player 
+import getpass
+
 class Human(Player):
     def __init__(self, second_player_name ):
         super().__init__(player_name="Player One")
@@ -27,8 +29,8 @@ class Human(Player):
 
 
 
-            player_choice = input(f"{self.player_name}, choose a gesture: ")
-            second_player_choice = input(f"{self.second_player_name}, choose a gesture: ")
+            player_choice = getpass.getpass(f"{self.player_name}, choose a gesture: ")
+            second_player_choice = getpass.getpass(f"{self.second_player_name}, choose a gesture: ")
 
             # 0 > 2 and 3
             # 0 < 1 and 4

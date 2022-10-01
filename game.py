@@ -26,13 +26,6 @@ class Game:
                 break 
             else:
                 print("That's not an option. Try again.")
-            
-
-        
-            
-        
-
-
         
     def display_welcome(self):
         print("\nWelcome to a game of Rock, Paper, Scissors, Lizard, Spock!")
